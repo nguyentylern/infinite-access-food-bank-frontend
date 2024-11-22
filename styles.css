@@ -179,10 +179,17 @@ hr {
     background-color: hsl(0, 0%, 100%);
     border: 2px solid hsl(0, 0%, 0%);
     text-align: center;
+    color: hsl(0, 0%, 0%);
 }
 
 .food-search-entry > *:nth-child(1) {
     resize: none;
+    text-align: center;
+    text-align-last: center;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    border: 2px solid hsl(0, 0%, 0%);
 }
 
 .food-search-entry > *:nth-child(2) {
