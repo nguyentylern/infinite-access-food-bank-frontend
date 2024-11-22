@@ -45,6 +45,8 @@ document.getElementById('food-search-form').addEventListener('submit', async fun
             throw new Error(`Server error: ${response.status}`);
         }
 
+        results_div.innerHTML = '';
+
         const data = await response.json(); // Parse JSON response
         console.log(data);
         for (let i = 0; i < data.length; i++) {
