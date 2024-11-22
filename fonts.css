@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "Instrument Serif";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("fonts/InstrumentSerif-Regular.otf");
+}
+
+@font-face {
+    font-family: "Instrument Serif";
+    font-style: italic;
+    font-weight: normal;
+    font-display: swap;
+    src: url("fonts/InstrumentSerif-Italic.otf");
+}
+
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("fonts/Geist-Regular.woff") format("woff"),
+         url("fonts/Geist-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url("fonts/Geist-Bold.woff") format("woff"),
+         url("fonts/Geist-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Geist Mono";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("fonts/GeistMono-Regular.woff") format("woff"),
+         url("fonts/GeistMono-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Geist Mono";
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url("fonts/GeistMono-Bold.woff") format("woff"),
+         url("fonts/GeistMono-Bold.woff2") format("woff2");
+}

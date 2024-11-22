@@ -1,0 +1,274 @@
+@import url("fonts.css");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    text-decoration: inherit;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+svg {
+    height: auto;
+    width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* sr_only */
+
+.visually-hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
+
+/* design */
+
+:root {
+    font-family: "Geist", sans-serif;
+    --fs-xl: 5rem;
+    --fs-l: 3rem;
+    --fs-m: 1.75rem;
+    --fs-s: 1.375rem;
+    --fs-xs: 1rem;
+    font-size: var(--fs-xs);
+}
+
+@media (width < 500px) {
+    :root {
+        font-size: 80%;
+    }
+}
+
+header {
+    font-family: "Instrument Serif", serif;
+    font-size: var(--fs-xl);
+    padding: var(--fs-xs) var(--fs-xs) 0;
+}
+
+header h1 > div {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--fs-xs);
+}
+
+header .title-line {
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-grow: 1;
+    align-items: center;
+}
+
+header .title-line div {
+    height: 4px;
+    background-color: hsl(0, 0%, 0%);
+}
+
+@media (width < 400px) {
+    header .title-line div {
+        background-color: hsla(0, 0%, 0%, 0%)
+    }
+}
+
+.hero {
+    padding-top: var(--fs-l);
+    padding-inline: var(--fs-xs);
+    text-align: center;
+    font-size: var(--fs-m);
+}
+
+.hero > * + * {
+    margin-top: var(--fs-l);
+}
+
+.name, .slogan {
+    font-family: "Instrument Serif", serif;
+}
+
+.hero img {
+    border: 2px solid hsl(0, 0%, 0%);
+    height: 45vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero > p {
+    width: min(100%, 30rem);
+    margin-inline: auto;
+}
+
+.not-name {
+    font-size: 0.9em;
+}
+
+hr {
+    width: calc(100% - var(--fs-xs) * 2);
+    margin-inline: auto;
+    color: hsl(0, 0%, 0%);
+}
+
+/* Resources */
+
+.resources {
+    padding-block: var(--fs-l);
+    padding-inline: var(--fs-xs);
+}
+
+.resources hr {
+    margin-top: var(--fs-l);
+    width: 50%;
+}
+
+.resources h2 {
+    font-family: "Instrument Serif", serif;
+    font-size: var(--fs-l);
+    text-align: center;
+}
+
+.resources h3 {
+    text-align: center;
+    font-family: "Instrument Serif", serif;
+    font-size: var(--fs-m);
+    margin-top: var(--fs-l);
+}
+
+.food-search-container {
+    margin-top: var(--fs-l);
+    font-family: "Geist Mono", monospace;
+}
+
+.food-search-entry {
+    width: min(100%, 20rem);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.food-search-entry > * {
+    min-width: 0;
+    background-color: hsl(0, 0%, 100%);
+    border: 2px solid hsl(0, 0%, 0%);
+    text-align: center;
+}
+
+.food-search-entry > *:nth-child(1) {
+    resize: none;
+}
+
+.food-search-entry > *:nth-child(2) {
+    border-inline: 0;
+}
+
+.food-search-entry > *:nth-child(2), .food-search-entry > *:nth-child(3) {
+    line-height: 2;
+}
+
+.food-search-entry > *:nth-child(3) {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#food-search-results {
+    font-family: "Geist Mono";
+    /* margin-top: var(--fs-l); */
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    /* border: 2px solid hsl(0, 0%, 0%); */
+    background-color: hsl(0, 0%, 0%);
+    gap: 2px;
+}
+
+.food-search-result {
+    padding: var(--fs-xs);
+    background-color: hsl(0, 0%, 100%);
+}
+
+.food-search-result > * + * {
+    margin-top: var(--fs-xs);
+}
+
+.food-search-result > *:first-child {
+    font-weight: bold;
+}
+
+@supports (grid-template-rows: subgrid) {
+    .food-search-result {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 3;
+        gap: 0;
+    }
+}
+
+.nfcc-list {
+    list-style: none;
+    margin-top: var(--fs-l);
+}
+
+.nfcc-list li + li {
+    margin-top: var(--fs-xs);
+}
+
+.nfcc-list li img {
+    border: 2px solid hsl(0, 0%, 0%);
+    width: 100%;
+}
+
+@media (width > 1200px) {
+    .nfcc-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--fs-xs);
+    }
+
+    .nfcc-list li + li {
+        margin-top: 0;
+    }
+}
+
+footer {
+    margin-block: var(--fs-l);
+    padding-inline: var(--fs-xs);
+}
+
+footer h2 {
+    font-size: var(--fs-m);
+    font-family: "Instrument Serif", serif;
+}
+
+footer p {
+    font-size: var(--fs-s);
+    margin-top: var(--fs-xs);
+    width: min(40rem, 100%);
+}

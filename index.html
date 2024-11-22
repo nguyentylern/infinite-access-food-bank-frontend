@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Infinite Access Food bank</title>
+</head>
+<body>
+    <header>
+        <h1>
+            <div>
+                <span>Infinite</span>
+                <span class="title-line"><div></div></span>
+                <span>Access</span>
+            </div>
+            <div>
+                <span>Food</span>
+                <span class="title-line"><div></div></span>
+                <span>Bank</span>
+            </div>
+        </h1>
+    </header>
+    <main>
+        <section class="hero">
+            <p><span class="name">Infinite Access Food Bank</span><span class="not-name"> is an institution creating resources for food banks and pantries to help the food insecure.</span></p>
+            <img src="images/main.webp" alt="" class="hero-img">
+            <p class="slogan">It takes a village.</p>
+        </section>
+        <hr>
+        <section class="resources">
+            <h2>Resources</h2>
+            <article class="food-search">
+                <h3>Find Your Nearest Food Bank or Pantry</h3>
+                <div class="food-search-container">
+                    <form class="food-search-entry" id="food-search-form">
+                        <input type="text" name="zip-input" id="zip-input" placeholder="ZIP CODE" required></input>
+                        <select name="place-select" id="place-select" required>
+                            <option value="bank">BANK</option>
+                            <option value="bank">PANTRY</option>
+                        </select>
+                        <button>SEARCH</button>
+                    </form>
+                    <ul id="food-search-results" role="list">
+                        <!-- <div class="food-search-result">
+                            <p>PLACE NAME</p>
+                            <p>PLACE ADDRESS</p>
+                            <p>DISTANCE</p>
+                        </div> -->
+                    </ul>
+                </div>
+            </article>
+            <hr>
+            <article>
+                <h3>Donate to NFCC</h3>
+                <ul class="nfcc-list" role="list">
+                    <li><img src="images/nfcc/1.webp" alt=""></li>
+                    <li><img src="images/nfcc/2.webp" alt=""></li>
+                    <li><img src="images/nfcc/3.webp" alt=""></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <h2>IAFB</h2>
+        <p><span class="name">Infinite Access Food Bank</span><span class="not-name"> is created and developed by Anna Holland's Research class at Innovation Academy in Alpharetta, Georgia for the school's Project Week.</span></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
