@@ -101,7 +101,7 @@ header .title-line div {
 }
 
 .hero {
-    padding-top: var(--fs-l);
+    padding-block: var(--fs-l);
     padding-inline: var(--fs-xs);
     text-align: center;
     font-size: var(--fs-m);
@@ -134,7 +134,7 @@ header .title-line div {
 hr {
     width: calc(100% - var(--fs-xs) * 2);
     margin-inline: auto;
-    color: hsl(0, 0%, 0%);
+    border: 1px solid hsl(0, 0%, 0%);
 }
 
 /* Resources */
@@ -186,7 +186,13 @@ hr {
 }
 
 .food-search-entry > *:nth-child(2) {
+    text-align: center;
+    text-align-last: center;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
     border-inline: 0;
+    border-block: 2px solid hsl(0, 0%, 0%);
 }
 
 .food-search-entry > *:nth-child(2), .food-search-entry > *:nth-child(3) {
